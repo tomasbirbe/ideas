@@ -49,9 +49,47 @@ h4,
 h5,
 h6 {
 	overflow-wrap: break-word;
-	font-family: 'Poppins', sans-serif;
 }
 
 #root {
 	isolation: isolate;
+}
+
+/* Custom */
+
+:root {
+	--backfill: #F1F1F1;
+	--inverted-backfill: #0D0D0D;
+}
+
+
+
+body {
+	font-family: 'Hind', sans-serif;
+	color: var(--backfill);
+	background-color: var(--inverted-backfill);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Poppins', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--backfill: #0D0D0D;
+		--inverted-backfill: #F1F1F1
+	}
+
+	body {
+		background-color: var(--backfill);
+		color: var(--inverted-backfill);
+	}
+
+
 }
