@@ -53,6 +53,7 @@ h6 {
 
 #root {
 	isolation: isolate;
+	height: 100%;
 }
 
 /* Custom */
@@ -62,12 +63,18 @@ h6 {
 	--inverted-backfill: #0D0D0D;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--backfill: #0D0D0D;
+		--inverted-backfill: #F1F1F1
+	}
 
+}
 
 body {
 	font-family: 'Hind', sans-serif;
-	color: var(--backfill);
-	background-color: var(--inverted-backfill);
+	color: var(--inverted-backfill);
+	background-color: var(--backfill);
 }
 
 p,
@@ -78,18 +85,4 @@ h4,
 h5,
 h6 {
 	font-family: 'Poppins', sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--backfill: #0D0D0D;
-		--inverted-backfill: #F1F1F1
-	}
-
-	body {
-		background-color: var(--backfill);
-		color: var(--inverted-backfill);
-	}
-
-
 }
